@@ -5,8 +5,12 @@ using System.Text;
 
 namespace HumaneSociety
 {
-    public class inmunization
+    public class Inmunization
     {
         private int dateGiven;
+        string name;
+
+
     }
+     
 }

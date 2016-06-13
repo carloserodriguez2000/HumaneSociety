@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HumaneSociety
 {
 
-    class Cages
+    public class Cages
     {
         int lastCageID = 0;     // used to give unique ID's to each cage
         private List<DogCage> dogCages;
@@ -17,26 +17,33 @@ namespace HumaneSociety
 
         public Cages()
         {
-
-        }
+            dogCages = new List<DogCage>();
+            catCages = new List<CatCage>() ;
+            birdCages = new List< BirdCage>() ;
+            reptileCages = new List<ReptileCage>() ;
+    }
 
         public void manageCages()
         {
-            bool loopContinue = true;
+            char menuChoice;
             do
             {
-                Console.WriteLine("MANAGE CAGES");
-                Console.WriteLine("1-) Add Dog Cages");
-                Console.WriteLine("2-) Add Cat Cages");
-                Console.WriteLine("3-) Add Bird Cages");
-                Console.WriteLine("4-) Add Reptile Cages");
-                Console.WriteLine("5-) Delete Dog Cages");
-                Console.WriteLine("6-) Delete Cat Cages");      // setup the cages available in the facility
-                Console.WriteLine("7-) Delete Bird Cages");      // setup the cages available in the facility
-                Console.WriteLine("8-) Delete Reptile Cages");      // setup the cages available in the facility
+                Console.SetCursorPosition(0, 0);    // move the cursor up Nine lines to paint next menu on top.
+                //                "12345678901234567890123456789012" 
+                Console.WriteLine("   MANAGE CAGES                 ");
+                Console.WriteLine("1-) Add Dog     Cages           ");
+                Console.WriteLine("2-) Add Cat     Cages           ");
+                Console.WriteLine("3-) Add Bird    Cages           ");
+                Console.WriteLine("4-) Add Reptile Cages           ");
+                Console.WriteLine("5-) Delete Dog     Cages        ");
+                Console.WriteLine("6-) Delete Cat     Cages        ");      // setup the cages available in the facility
+                Console.WriteLine("7-) Delete Bird    Cages        ");      // setup the cages available in the facility
+                Console.WriteLine("8-) Delete Reptile Cages        ");      // setup the cages available in the facility
                 Console.WriteLine("9-) BACK TO MAIN MENU");
+                Console.Write    ("                                  ");
+                Console.SetCursorPosition(0, Console.CursorTop);    // move the cursor up Nine lines to paint next menu on top.
                 Console.Write("ENTER CHOICE: ");
-                char menuChoice = Console.ReadKey().KeyChar;
+                menuChoice = Console.ReadKey().KeyChar;
 
                 switch (menuChoice)
                 {
@@ -66,12 +73,10 @@ namespace HumaneSociety
                         break;
                     case '9':
                         cleanUpBack();
-                        loopContinue = false;
                         break;
-
                 }
 
-            } while (loopContinue == true);
+            } while (menuChoice != '9');
 
         }
 
@@ -109,11 +114,16 @@ namespace HumaneSociety
             reptileCages.Add(newCage);
         }
 
-     
+        private int getCageID()
+        {
+            Console.Write("Enter Cage ID");
+            int cageID = Convert.ToUInt16( Console.Read());
+            return cageID;
+        }
         void deleteDogCage()
         {
             Console.Write("Enter Cage ID");
-            int cageID = Console.Read();
+            int cageID = getCageID();
 
             //dogCages.Find(x => x.cageID == cageID);
             foreach (var dogCage in dogCages)  // Find a dog cage to delete
@@ -138,10 +148,9 @@ namespace HumaneSociety
         }
         void deleteCatCage()
         {
-            Console.Write("Enter Cage ID");
-            int cageID = Console.Read();
+            int cageID = getCageID();
 
-            //catCages.Find(x => x.cageID == cageID);
+           //catCages.Find(x => x.cageID == cageID);
             foreach (var catCage in catCages)  // Find a cat cage to delete
             {
                 if (catCage.cageID == cageID)
@@ -163,8 +172,7 @@ namespace HumaneSociety
         }
         void deleteBirdCage()
         {
-            Console.Write("Enter Cage ID");
-            int cageID = Console.Read();
+            int cageID = getCageID();
 
             //birdCages.Find(x => x.cageID == cageID);
             foreach (var birdCage in birdCages)  // Find a bird cage to delete
@@ -189,8 +197,7 @@ namespace HumaneSociety
         }
         void deleteReptileCage()
         {
-            Console.Write("Enter Cage ID");
-            int cageID = Console.Read();
+            int cageID = getCageID();
 
             //reptileCages.Find(x => x.cageID == cageID);
             foreach (var reptileCage in reptileCages)  // Find a reptile cage to delete
@@ -216,21 +223,47 @@ namespace HumaneSociety
 
         public DogCage getDogCage()
         {
-            // DogCage adogCage = new DogCage();
+            DogCage adogCage = null;
+       
             foreach (var aCage in dogCages)
             {
                 if (aCage.isCageEmpty())
                 {
-                    return aCage;
+                    adogCage = aCage;
+                    break;
                 }
             }
-            return ((DogCage) null);
+            if (adogCage == null)
+            {
+                Console.Write("Sorry. No open cages at this time. Hit a key to continue.");
+            }
+            return (adogCage);
+        }
+        public DogCage getThisDogCage(int cageID)
+        {
+            DogCage adogCage = null;
+
+            foreach (DogCage aCage in dogCages)
+            {
+                if( aCage.cageID == cageID)
+                {
+                    adogCage = aCage;
+                }
+            }
+
+                return adogCage;
+
         }
 
         private void cleanUpBack()
         {
-            throw new System.NotImplementedException();
-
+            //throw new System.NotImplementedException();
+            Console.SetCursorPosition(0, 0);
+            for (int i = 0; i < 11; i++)
+            {
+                //                "12345678901234567890123456789012" 
+                Console.WriteLine("                                "); // Erase the lines above before returing to menu
+            }
         }
 
     }// END OF Class Cages

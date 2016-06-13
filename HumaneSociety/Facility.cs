@@ -7,9 +7,10 @@ namespace HumaneSociety
 {
     class Facility
     {
-        private Animals theAnimals;
-        private Supplies theSupplies;
-        private Cages theCages;
+        //public  Animals theAnimals;
+        //private Supplies theSupplies;
+        //public  Cages theCages;
+        
 
         public Facility()
         {
@@ -17,9 +18,9 @@ namespace HumaneSociety
         }
         public void Run()
         {
-            theAnimals = new Animals();
-            theSupplies = new Supplies();
-            theCages = new Cages();
+            Animals theAnimals = new Animals();
+            Supplies theSupplies = new Supplies();
+            Cages theCages = new Cages();
             char menuChoice;
 
             do
@@ -28,7 +29,7 @@ namespace HumaneSociety
                                                     //"12345678901234567890123456789012"
                 Console.WriteLine("Humane Society Management System");
                 Console.WriteLine("1-) Manage Animals              ");
-                Console.WriteLine("2-) Manage Donor                ");
+                Console.WriteLine("2-) Manage  Adopter             ");
                 Console.WriteLine("3-) Show Animals                ");
                 Console.WriteLine("4-) Manage Food Supplies        ");
                 Console.WriteLine("5-) Manage Medication Supplies  ");
@@ -38,14 +39,16 @@ namespace HumaneSociety
                 Console.SetCursorPosition(Console.CursorLeft - 5, Console.CursorTop);    // move the cursor up Nine lines to paint next menu on top.
                 menuChoice = Console.ReadKey().KeyChar;
                 // or just pass 0,0
+
                 switch (menuChoice)
                 {
                     case '1':
                         theAnimals.manageAnimals(theSupplies, theCages);
                         break;
                     case '2':
-                        Donor Donor = new Donor();
-                        Donor.manageDonor();
+                        Adopter theAdopter = new Adopter();
+                        theAdopter.manageAdopter(theAnimals, theCages);
+                       
                         break;
                     case '3':
                         theAnimals.showAnimals();
@@ -54,7 +57,7 @@ namespace HumaneSociety
                         theSupplies.manageFoodSupplies();
                         break;
                     case '5':
-                        theSupplies.manageMedicationSupplies();
+                        //manageMedication();
                         break;
                     case '6':
                         theCages.manageCages();

@@ -31,110 +31,102 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="HumaneSociety.Animal">
-    <Position X="3.75" Y="9.25" Width="1.5" />
-    <AssociationLine Name="inmunizations" Type="HumaneSociety.inmunization" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="5.25" Y="9.938" />
-        <Point X="16.073" Y="9.938" />
-        <Point X="16.073" Y="9.044" />
-        <Point X="16.625" Y="9.044" />
-        <Point X="16.625" Y="8.603" />
-      </Path>
-    </AssociationLine>
+    <Position X="6" Y="18.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAABAAABABAAQAgAAgAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EgAAAAAAAAAAARAAgBABAAQAgAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Animal.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="inmunizations" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="HumaneSociety.Dog">
-    <Position X="0.5" Y="12.25" Width="1.5" />
+    <Position X="2" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Dog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Cat">
-    <Position X="2.75" Y="12.25" Width="1.5" />
+    <Position X="4.25" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Cat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Bird">
-    <Position X="5" Y="12.25" Width="1.5" />
+    <Position X="6.5" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bird.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Reptile">
-    <Position X="7.25" Y="12.25" Width="1.5" />
+    <Position X="8.75" Y="16.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Reptile.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HumaneSociety.inmunization">
-    <Position X="16.5" Y="7.5" Width="1.5" />
+  <Class Name="HumaneSociety.Inmunization">
+    <Position X="15" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>inmunization.cs</FileName>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inmunization.cs</FileName>
+      <NewMemberFileName>inmunization.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Adopter">
-    <Position X="14.5" Y="5" Width="1.5" />
+    <Position X="15" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIBAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AQAAAAICAAAAAAAAAAAAAQAACAQAEAiEAAMIAgAAAAA=</HashCode>
       <FileName>Adopter.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="theApplication" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="HumaneSociety.Application">
-    <Position X="18.75" Y="6" Width="1.5" />
+    <Position X="18" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAgAAAAAAAAAAAABACAQAAAAAAAAgAAA=</HashCode>
+      <HashCode>AAAAAACAAAAAAgAAAAAAAAAAAABACAQAAAAAAAIgAAA=</HashCode>
       <FileName>Application.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Food">
-    <Position X="3.75" Y="3.25" Width="1.5" />
+    <Position X="22" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAhAAAAAAAEAAAAAAAABAAABAEAAAAAAAAAAAEAAEA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Food.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.CatFood">
-    <Position X="5" Y="6.5" Width="1.5" />
+    <Position X="22.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CatFood.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.DogFood">
-    <Position X="2.5" Y="6.5" Width="1.5" />
+    <Position X="20.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DogFood.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.BirdFood">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Position X="18.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BirdFood.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Cage">
-    <Position X="4.5" Y="18" Width="1.5" />
+    <Position X="10.5" Y="13.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAABAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>Cage.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.DogCage">
-    <Position X="0.5" Y="15.25" Width="1.5" />
+    <Position X="2" Y="10.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>DogCage.cs</FileName>
@@ -145,7 +137,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="HumaneSociety.BirdCage">
-    <Position X="5.5" Y="15.25" Width="1.5" />
+    <Position X="6.5" Y="10.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAEAAAAAAAAAAAAI=</HashCode>
       <FileName>BirdCage.cs</FileName>
@@ -155,7 +147,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="HumaneSociety.ReptileCage">
-    <Position X="7.75" Y="15.25" Width="1.5" />
+    <Position X="8.75" Y="10.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAABAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ReptileCage.cs</FileName>
@@ -165,35 +157,35 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="HumaneSociety.Program">
-    <Position X="16.75" Y="1.5" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAwQAAAAgAAAAAAAAAAAAAAAAAAIAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.DogInmunization">
-    <Position X="18.25" Y="11" Width="1.5" />
+    <Position X="18" Y="12.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DogInmunization.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.CatInmunization">
-    <Position X="16.25" Y="11" Width="1.5" />
+    <Position X="16.25" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CatInmunization.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.BirdInmunization">
-    <Position X="14" Y="11" Width="1.5" />
+    <Position X="14.5" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BirdInmunization.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.ReptileInmunization">
-    <Position X="11.25" Y="11" Width="1.5" />
+    <Position X="12.75" Y="12.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ReptileInmunization.cs</FileName>
@@ -207,42 +199,80 @@
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Supplies">
-    <Position X="12.75" Y="3" Width="1.5" />
+    <Position X="21.75" Y="4.75" Width="1.5" />
+    <AssociationLine Name="catFood" Type="HumaneSociety.CatFood" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.625" Y="6.623" />
+        <Point X="22.625" Y="6.998" />
+        <Point X="23.5" Y="6.998" />
+        <Point X="23.5" Y="8.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="dogFood" Type="HumaneSociety.DogFood" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.562" Y="6.623" />
+        <Point X="22.562" Y="6.947" />
+        <Point X="22.489" Y="6.947" Type="JumpStart" />
+        <Point X="22.323" Y="6.947" Type="JumpEnd" />
+        <Point X="21.5" Y="6.947" />
+        <Point X="21.5" Y="8.75" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>CAAAAgAAAAARAAEQAAAEAAAAQAoBAAACFhAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAARAAAQAAAEAAAAAAwAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Supplies.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="catFood" />
+      <Field Name="dogFood" />
+      <Field Name="birdFood" />
+      <Field Name="reptileFood" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="HumaneSociety.Facility">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Position X="1" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAAAQAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Facility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.Animals">
-    <Position X="9.75" Y="4" Width="1.5" />
+    <Position X="4" Y="3.75" Width="1.5" />
+    <AssociationLine Name="Dogs" Type="HumaneSociety.Dog" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="6.722" />
+        <Point X="3.75" Y="6.722" />
+        <Point X="3.75" Y="16.866" />
+        <Point X="3.5" Y="16.866" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAEABgCAAAAAAAABABAAgQBAAQAAEAAACEIAAAAAAQ=</HashCode>
+      <HashCode>AAAEABgCAAAAAQQARABAAgQBAAQABEAAACEIAAAAAAY=</HashCode>
       <FileName>Animals.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Dogs" />
+      <Field Name="Cats" />
+      <Field Name="Birds" />
+      <Field Name="Reptiles" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="HumaneSociety.Donor">
-    <Position X="8" Y="1" Width="1.5" />
+    <Position X="22.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Donor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.ReptileFood">
-    <Position X="7" Y="6.5" Width="1.5" />
+    <Position X="24.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>ReptileFood.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HumaneSociety.CatCage">
-    <Position X="3" Y="15.25" Width="1.5" />
+    <Position X="4.25" Y="10.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAQAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CatCage.cs</FileName>
@@ -250,6 +280,19 @@
     <ShowAsAssociation>
       <Field Name="aCat" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="HumaneSociety.Cages">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAEBBAQQBIAAAAAEAQABAAAIEABASIAAAA=</HashCode>
+      <FileName>Cages.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="dogCages" />
+      <Field Name="catCages" />
+      <Field Name="birdCages" />
+      <Field Name="reptileCages" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Enum Name="HumaneSociety.EmptyLineBehavior" Collapsed="true">
     <Position X="15" Y="2.75" Width="1.5" />

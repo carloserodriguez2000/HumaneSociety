@@ -5,9 +5,9 @@ using System.Text;
 
 namespace HumaneSociety
 {
-    public class ReptileInmunization : inmunization
+    public class ReptileInmunization : Inmunization
     {
-        List<string> inmunizations;     
+        List<string> inmunizations= new List<string>();     
         public void AddInmunization(string inmuniKind)
         {
             inmunizations.Add(inmuniKind);

@@ -7,6 +7,6 @@ namespace HumaneSociety
 {
     public class BirdFood : Food
     {
-        private int naturalSeedPercent;
+        //private int naturalSeedPercent = 75;
     }
 }

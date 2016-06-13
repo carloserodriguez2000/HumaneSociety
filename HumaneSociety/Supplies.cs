@@ -5,11 +5,11 @@ using System.Text;
 
 namespace HumaneSociety
 {
-     class Supplies
+    public class Supplies
     {
-        private int Collars;
-        private int Leash;
-        private int Box;
+        //private int Collars;
+        //private int Leash;
+        //private int Box;
         public  CatFood catFood;
         public DogFood dogFood;
         public BirdFood birdFood;
@@ -31,14 +31,14 @@ namespace HumaneSociety
             {
                 Console.SetCursorPosition(0, 0);    // move the cursor up Nine lines to paint next menu on top.
                 //                "12345678901234567890123456789012" 
-                Console.WriteLine("MANAGE SUPPLIES                 ");
+                Console.WriteLine("    MANAGE SUPPLIES             ");
                 Console.WriteLine("1-) Add Dog Food.               ");
                 Console.WriteLine("2-) Add Cat Food                ");
                 Console.WriteLine("3-) Add Bird Food               ");
                 Console.WriteLine("4-) Add Reptile Food            ");
                 Console.WriteLine("5-) Show Food Inventory         ");
                 Console.WriteLine("6-) Add Reptile Food            ");
-                Console.WriteLine("7-) RETURN TO MAIN MENU         ");
+                Console.WriteLine("9-) RETURN TO MAIN MENU         ");
                 Console.Write("ENTER CHOICE:                   ");
                 Console.SetCursorPosition(Console.CursorLeft - 5, Console.CursorTop);
                 menuChoice = Console.ReadKey().KeyChar;
@@ -62,35 +62,43 @@ namespace HumaneSociety
                         break;
                     case '9':
                         cleanUpBack();
-                        Console.SetCursorPosition(0, 0);    // move the cursor up Nine lines to paint next menu on top.
 
                         break;
                 }
 
             } while (menuChoice != '9');
-        }
+        } //
 
         private int askAmount(string animalType)
         {
-            int len;
             string msg = "Enter Amount of {0}: ";
             
+            int currLeftPos = Console.CursorLeft;
             Console.Write(msg, animalType);
-            int amount = Console.Read();
-            Console.SetCursorPosition(Console.CursorLeft - msg.Length, Console.CursorTop);    // move the cursor up Nine lines to paint next menu on top.
+            int amount = Convert.ToUInt16(Console.ReadLine());
+            Console.SetCursorPosition(currLeftPos, Console.CursorTop -1);    // move the cursor up Nine lines to paint next menu on top.
             Console.Write("                       ");
 
             return amount;
         }
         private void showFood()
         {
+            int currYPosition = Console.CursorTop;
             Console.WriteLine("Current Food Inventory: ");
-            Console.WriteLine("We have %s of Dog Food in inventory", dogFood.level.ToString()); 
-            Console.WriteLine("We have %s of Cat Food in inventory", catFood.level.ToString()); 
-            Console.WriteLine("We have %s of Bird Food in inventory", birdFood.level.ToString());
-            Console.WriteLine("We have %s of Reptile Food in inventory", reptileFood.level.ToString());
+            Console.WriteLine("We have {0} of Dog Food in inventory", dogFood.level.ToString()); 
+            Console.WriteLine("We have {0} of Cat Food in inventory", catFood.level.ToString()); 
+            Console.WriteLine("We have {0} of Bird Food in inventory", birdFood.level.ToString());
+            Console.WriteLine("We have {0} of Reptile Food in inventory", reptileFood.level.ToString());
+            Console.Write(" Press any key to continue");
+            Console.ReadKey(true);
+            Console.SetCursorPosition(0, currYPosition - 1);
+            for( int i = 0; i<6; i++)
+            {
+                //                "12345678901234567890123456789012" 
+                Console.WriteLine("                                "); // Erase the lines above before returing to menu
 
-            throw new System.NotImplementedException();
+            }
+            //throw new System.NotImplementedException();
         }
 
         private void cleanUpBack()
@@ -99,67 +107,6 @@ namespace HumaneSociety
         }
         
 
-        public void manageMedicationSupplies()
-        {
-            Console.WriteLine("MANAGE SUPPLIES");
-            Console.WriteLine("1-) Manage Dog Medication.");
-            Console.WriteLine("2-) Manage Cat Medication.");
-            Console.WriteLine("3-) Manage Bird Medication.");
-            Console.WriteLine("4-) Manage Reptile Medication.");
-            Console.WriteLine("5-) Show Medication Inventory");
-            Console.WriteLine("6-) RETURN TO MAIN MENU");
-
-
-            char menuChoice = Console.ReadKey().KeyChar;
-            switch (menuChoice)
-            {
-                case '1':
-                    addDogMedication();
-                    break;
-                case '2':
-                    addCatMedication();
-                    break;
-                case '3':
-                    addBirdMedication();
-                    break;
-                case '4':
-                    addReptileMedication();
-                    break;
-                case '5':
-                    showMedicationInventory();
-                    break;
-                case '6':
-                    quitCleanupMedication();
-                    break;
-            }
-        }
-        public void addDogMedication()
-        {
-
-        }
-
-        public void addCatMedication()
-        {
-
-        }
-
-        public void addBirdMedication()
-        {
-
-        }
-
-        public void addReptileMedication()
-        {
-
-        }
-        public void showMedicationInventory()
-        {
-
-        }
-
-        public void quitCleanupMedication()
-        {
-
-        }
+ 
     }
 }

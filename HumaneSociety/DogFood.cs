@@ -7,6 +7,6 @@ namespace HumaneSociety
 {
     public class DogFood : Food
     {
-        private int naturalMeatPercent;
+        //private int naturalMeatPercent;
     }
 }

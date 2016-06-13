@@ -8,7 +8,7 @@ namespace HumaneSociety
     public class CatFood : Food
     {
       
-        int naturalFishPercent;
+        //int naturalFishPercent;
 
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace HumaneSociety
 {
-    public class BirdInmunization : inmunization
+    public class BirdInmunization : Inmunization
     {
     }
 }

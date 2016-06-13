@@ -7,7 +7,7 @@ namespace HumaneSociety
 {
     public class Cat : Animal
     {
-        bool claws; //claws 0= no claws 1= has claws
+        //bool claws; //claws 0= no claws 1= has claws
 
 
     }

@@ -7,6 +7,12 @@ namespace HumaneSociety
 {
     public class Dog : Animal
     {
-        int cageID;
+
+        public Dog()
+        {
+
+
+        }
+
     }
 }
