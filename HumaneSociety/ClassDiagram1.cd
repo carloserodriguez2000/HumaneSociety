@@ -211,10 +211,8 @@
     <AssociationLine Name="dogFood" Type="HumaneSociety.DogFood" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="22.562" Y="6.623" />
-        <Point X="22.562" Y="6.947" />
-        <Point X="22.489" Y="6.947" Type="JumpStart" />
-        <Point X="22.323" Y="6.947" Type="JumpEnd" />
-        <Point X="21.5" Y="6.947" />
+        <Point X="22.562" Y="7.248" />
+        <Point X="21.5" Y="7.248" />
         <Point X="21.5" Y="8.75" />
       </Path>
     </AssociationLine>

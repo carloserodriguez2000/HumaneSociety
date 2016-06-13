@@ -8,5 +8,10 @@ namespace HumaneSociety
     public class DogFood : Food
     {
         //private int naturalMeatPercent;
+        //public new void addAmount(int amount)
+        //{
+        //    addAmount(amount);
+        //}
+
     }
 }

@@ -86,25 +86,31 @@ namespace HumaneSociety
         //    int amount = Console.Read();
         //    return amount;
         //}
-        void createCatCages()
-        {
-            CatCage newCage = new CatCage();
-            newCage.cageID = (++lastCageID);
-            catCages.Add(newCage);
-
-        }
         void createDogCages()
         {
             DogCage newCage = new DogCage();
             newCage.cageID = (++lastCageID);
             dogCages.Add(newCage);
+            Console.WriteLine(" ");
+            Console.WriteLine("One Dog Cage Added. Total Dog Cages = {0}", dogCages.Count);
         }
+        void createCatCages()
+        {
+            CatCage newCage = new CatCage();
+            newCage.cageID = (++lastCageID);
+            catCages.Add(newCage);
+            Console.WriteLine(" ");
+            Console.WriteLine("One Cat Cage Added. Total Cat Cages = {0}", catCages.Count);
+        }
+        
 
         void createBirdCages()
         {
             BirdCage newCage = new BirdCage();
             newCage.cageID = (++lastCageID);
             birdCages.Add(newCage);
+            Console.WriteLine(" ");
+            Console.WriteLine("One Bird Cage Added. Total Bird Cages = {0}", birdCages.Count);
         }
 
         void createReptileCages()
@@ -112,6 +118,8 @@ namespace HumaneSociety
             ReptileCage newCage = new ReptileCage();
             newCage.cageID = (++lastCageID);
             reptileCages.Add(newCage);
+            Console.WriteLine(" ");
+            Console.WriteLine("One Retile Cage Added. Total Reptile Cages = {0}", reptileCages.Count);
         }
 
         private int getCageID()
@@ -136,13 +144,15 @@ namespace HumaneSociety
                     }
                     else
                     {
-                        throw new System.IndexOutOfRangeException("deleteDogCage NOT EMPTY");
+                        string msg = "Sorry. Dog Cage Is not empty. Press any key to continue";
+                        int currxPos = Console.CursorLeft;
+                        int curryPOs = Console.CursorTop;
+                        Console.Write(msg);
+                        Console.ReadKey(true);
+                        Console.SetCursorPosition(currxPos - 1, Console.CursorTop);    // move the cursor up Nine lines to paint next menu on top.
+                        Console.Write("                                                                 ");
+                        //throw new System.IndexOutOfRangeException("deleteDogCage NOT EMPTY");
                     }
-                }
-                else
-                {
-                    throw new System.IndexOutOfRangeException("deleteDogCage cageID not found");
-
                 }
             }
         }
@@ -235,7 +245,11 @@ namespace HumaneSociety
             }
             if (adogCage == null)
             {
+                int currxPos = Console.CursorLeft;
                 Console.Write("Sorry. No open cages at this time. Hit a key to continue.");
+                Console.ReadKey();
+                Console.SetCursorPosition(currxPos - 1, Console.CursorTop);    // move the cursor up Nine lines to paint next menu on top.
+                Console.Write("                                                            ");    // to erase the last message
             }
             return (adogCage);
         }

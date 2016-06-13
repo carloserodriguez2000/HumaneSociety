@@ -2,3 +2,4 @@ C:\Users\USER\Documents\Visual Studio 2015\Projects\HumaneSociety\HumaneSociety\
 C:\Users\USER\Documents\Visual Studio 2015\Projects\HumaneSociety\HumaneSociety\bin\Debug\HumaneSociety.pdb
 C:\Users\USER\Documents\Visual Studio 2015\Projects\HumaneSociety\HumaneSociety\obj\Debug\HumaneSociety.exe
 C:\Users\USER\Documents\Visual Studio 2015\Projects\HumaneSociety\HumaneSociety\obj\Debug\HumaneSociety.pdb
+C:\Users\USER\Documents\Visual Studio 2015\Projects\HumaneSociety\HumaneSociety\obj\Debug\HumaneSociety.csprojResolveAssemblyReference.cache

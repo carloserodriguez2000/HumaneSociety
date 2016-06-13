@@ -37,7 +37,9 @@ namespace HumaneSociety
                 Console.WriteLine("3-) Add Bird Food               ");
                 Console.WriteLine("4-) Add Reptile Food            ");
                 Console.WriteLine("5-) Show Food Inventory         ");
-                Console.WriteLine("6-) Add Reptile Food            ");
+                Console.WriteLine("6-)                             ");
+                Console.WriteLine("7-)                             ");
+                Console.WriteLine("8-)                             ");
                 Console.WriteLine("9-) RETURN TO MAIN MENU         ");
                 Console.Write("ENTER CHOICE:                   ");
                 Console.SetCursorPosition(Console.CursorLeft - 5, Console.CursorTop);
@@ -71,13 +73,14 @@ namespace HumaneSociety
 
         private int askAmount(string animalType)
         {
+            int currLeftPos = Console.CursorLeft;
+            Console.SetCursorPosition(currLeftPos - 1, Console.CursorTop);    // move the cursor up Nine lines to paint next menu on top.
             string msg = "Enter Amount of {0}: ";
             
-            int currLeftPos = Console.CursorLeft;
             Console.Write(msg, animalType);
             int amount = Convert.ToUInt16(Console.ReadLine());
-            Console.SetCursorPosition(currLeftPos, Console.CursorTop -1);    // move the cursor up Nine lines to paint next menu on top.
-            Console.Write("                       ");
+            Console.SetCursorPosition(currLeftPos-1, Console.CursorTop -1);    // move the cursor up Nine lines to paint next menu on top.
+            Console.Write("                                      ");
 
             return amount;
         }

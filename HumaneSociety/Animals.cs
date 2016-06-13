@@ -104,10 +104,18 @@ namespace HumaneSociety
         }
         private void feedDogs(DogFood theDogFood)
         {
+            int currLeftPos = Console.CursorLeft;
+            Console.SetCursorPosition(currLeftPos - 1, Console.CursorTop);
             if (theDogFood.level <= 0)
             {
-                Console.Write("Sorry. Out of Dog Food. Press any key to continue");
+                string msg = "Sorry. Out of Dog Food. Press any key to continue";
+                int currxPos = Console.CursorLeft;
+                int curryPOs = Console.CursorTop;
+                Console.Write(msg );
                 Console.ReadKey(true);
+                Console.SetCursorPosition(currxPos-1, Console.CursorTop);    // move the cursor up Nine lines to paint next menu on top.
+                Console.Write("                                                  ");    // to erase the last message
+
                 //throw new System.NotImplementedException("Dog Food is empty");
                 return;
             }
@@ -151,7 +159,8 @@ namespace HumaneSociety
         {
             if (aCage == null)
             {
-                throw new System.NotImplementedException("addDog no cages null");
+                return;
+               // throw new System.NotImplementedException("addDog no cages null");
             }
 
             Dog aDog = new Dog();
